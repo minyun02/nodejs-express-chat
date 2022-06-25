@@ -1,0 +1,22 @@
+{
+
+    "name": "nodejs-express-chat",
+    "version": "1.0.0",
+    "description": "nodejs-express-chat",
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "scripts": {
+      "dev": "nodemon",
+      "quit" : "Taskkill /IM node.exe /F"
+    },
+    "devDependencies": {
+      "@babel/preset-env": "^7.14.7",
+      "nodemon": "^2.0.12"
+    },
+    "dependencies": {
+      "express": "^4.17.3",
+      "ws": "^8.5.0"
+    }
+  }
