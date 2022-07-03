@@ -1,9 +1,16 @@
+require('dotenv').config();
+const {MONGODB_URI} = process.env;
 const express = require('express');
 const app = express();
 const http = require('http');
 const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server);
+const mongoose = new require('mongoose');
+
+mongoose.connect(MONGODB_URI)
+.then(() => { console.log('MongoDB Connected successfully') })
+.catch(err => console.log(err));
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
