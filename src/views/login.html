@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <!-- <link rel="stylesheet" href="/public/css/style.css"> -->
+  </head>
+  <body>
+    <h1>로그인</h1>
+    <form id="loginForm" method="POST">
+      아이디 : <input id="input" name="userid" autocomplete="off" />
+      비밀번호 : <input id="input" name="password" autocomplete="off" />
+      <button>로그인</button>
+      <input type="button" onclick="goSignup()" value="회원가입">
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/js/login.js"></script>
+  </body>
+</html>
