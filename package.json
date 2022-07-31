@@ -6,6 +6,7 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "nodemon",
     "start": "nodemon --watch ./ --exec node server.js",
@@ -16,6 +17,7 @@
     "nodemon": "^2.0.12"
   },
   "dependencies": {
+    "@socket.io/admin-ui": "^0.4.0",
     "dayjs": "^1.11.3",
     "dotenv": "^16.0.1",
     "express": "^4.17.3",

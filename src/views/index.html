@@ -2,13 +2,34 @@
 <html>
   <head>
     <title>Socket.IO chat</title>
-    <link rel="stylesheet" href="/public/css/style.css">
+  <!-- FIXME: 기능 구현 후 CSS 수정 -->
+  <!--  <link rel="stylesheet" href="/public/css/style.css">-->
   </head>
   <body>
-    <ul id="messages"></ul>
-    <form id="form" action="">
-      <input id="input" autocomplete="off" /><button>Send</button>
-    </form>
+    <div id="welcome"> 
+      <h2>Enter room</h2>
+      <form id="roomForm" action="">
+        <input id="roomName" type="text" placeholder="room name" autocomplete="off" />
+        <button>Send</button>
+      </form>
+      <ul id="createRoom"></ul>
+    </div>
+    <div id="chatRoom">
+      <ul id="list"></ul>
+      
+      <ul id="nickname"></ul>
+      <h4>Name</h4>
+      <form id="nameForm" action="">
+        <input type="text" id="nickname" autocomplete="off" placeholder="nickname"/>
+        <button>Save</button>
+      </form>
+      <ul id="messages"></ul>
+      <h4>Message</h4>
+      <form id="messageForm" action="">
+        <input id="message" type="text" placeholder="message" autocomplete="off" />
+        <button>Send</button>
+      </form>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/public/js/app.js"></script>
   </body>

@@ -3,6 +3,11 @@ body {
     padding-bottom: 3rem; 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
 }
+/*message*/
+#messages {
+    background-color: aquamarine;
+    min-width: 500px;
+}
 #form { 
     background: rgba(0, 0, 0, 0.15); 
     padding: 0.25rem; 
