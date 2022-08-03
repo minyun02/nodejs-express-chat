@@ -12,40 +12,34 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="">Chat Chat!</a>
         </h1>
-
+        
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          즐겁고 편안한 여행되십시오.
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="/sign-in" className={styles.card}>
+            <h2>Sign In &rarr;</h2>
+            <p>로그인 후 이용해주세요</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="/sign-up" className={styles.card}>
+            <h2>Sign Up &rarr;</h2>
+            <p>회원가입을 하시면, 더 많은 서비스를 이용하실 수 있습니다</p>
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
+            href="" className={styles.card}>
+            <h2>Exploration &rarr;</h2>
+            <p>사이트 살펴보기</p>
+          </a>
+
+          <a href="" className={styles.card} >
+            <h2>Company &rarr;</h2>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              저희 회사를 소개합니다
             </p>
           </a>
         </div>
@@ -53,13 +47,12 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href=""
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image src="/skate.svg" alt="Skateboard Logo" width={60} height={60} />
           </span>
         </a>
       </footer>
