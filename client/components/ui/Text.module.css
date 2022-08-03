@@ -1,0 +1,14 @@
+
+.text{
+    color: lightgray;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    align-self: flex-end;
+}
+
+.text :hover,
+  .text :active {
+    font-weight: bold;
+  }
