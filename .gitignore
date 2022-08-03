@@ -182,3 +182,4 @@ sketch
 # Ignore env
 .env
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,react
+package-lock.json

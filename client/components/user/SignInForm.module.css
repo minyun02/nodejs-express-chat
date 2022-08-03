@@ -1,4 +1,4 @@
-  .form {
+.form {
     padding: 1rem;
   }
 
@@ -9,6 +9,7 @@
     margin-bottom: 2rem;
     color: black;
   }
+
   .control {
     margin-bottom: 0.5rem;
   }
@@ -50,14 +51,4 @@
   .actions button:active {
     background-color: #3471C1;
     border-color: #3471C1;
-  }
-
-  .textWrap {    
-    align-content: left;
-  }
-  
-  .text,
-  .text a:hover {
-    font-weight: bold;
-    color: gray;
   }
