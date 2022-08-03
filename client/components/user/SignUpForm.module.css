@@ -1,8 +1,14 @@
-.form {
+  .form {
     padding: 1rem;
-    max-width: 30%;
   }
-  
+
+  .title {
+    display: block;
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: black;
+  }
   .control {
     margin-bottom: 0.5rem;
   }
@@ -44,4 +50,14 @@
   .actions button:active {
     background-color: #3471C1;
     border-color: #3471C1;
+  }
+
+  .textWrap {    
+    align-content: left;
+  }
+  
+  .text,
+  .text a:hover {
+    font-weight: bold;
+    color: gray;
   }

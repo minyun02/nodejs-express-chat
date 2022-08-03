@@ -29,6 +29,7 @@ function SignUpForm(props) {
     return (
       <Card>
         <form className={classes.form} onSubmit={submitHandler}>
+        <div className={classes.title}>회원가입</div>
           <div className={classes.control}>
             <label htmlFor='email'>Email</label>
             <input type='text' required id='title' ref={emailInputRef} placeholder={'이메일을 입력해주세요.'}/>
@@ -47,6 +48,9 @@ function SignUpForm(props) {
           </div>  
           <div className={classes.actions}>
             <button>Sign Up</button>
+          </div>
+          <div className={classes.textWrap}>
+            <a className={classes.text} href='/'>뒤로가기</a>
           </div>
         </form>
       </Card>
