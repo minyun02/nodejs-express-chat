@@ -1,0 +1,43 @@
+.item {
+    margin: 1rem 0;
+  }
+
+  .content {
+    text-align: left;
+    padding: 1rem;
+  }
+  
+
+  .title {
+    font-size: 0.95rem;
+    color: #2c292b;
+    text-align: right;
+  }
+  
+  .owner {
+    font-size: 0.95rem;
+    color: #2c292b;
+    text-align: right;
+  }
+
+  .actions {
+    padding: 1.5rem;
+    text-align: right;
+  }
+  
+  .actions button {
+    font: inherit;
+    cursor: pointer;
+    color: #003B87;
+    border: 1px solid #003B87;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+  }
+  
+  .actions button:hover,
+  .actions button:active {
+    background-color: #003B87;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+  }
