@@ -34,8 +34,7 @@ app.use(express.static(__dirname + '/src'));
 let userId = '';
 
 app.get('/', (req, res) => {
-  console.log(__dirname)
-  // res.sendFile(__dirname + '/src/views/index.html');
+  console.log(__dirname);
   res.sendFile(__dirname + '/src/views/login.html');
 });
 
@@ -43,7 +42,8 @@ app.post('/', (req, res) => {
   Users.findOne({userid : req.body.userid, password : req.body.password }, (err, user) => {
     console.log(req.body);
     if (err) return res.status(500).json({message : "에러발생.."});
-    else if (user) return res.status(200).json({message : "반갑습니다! " + req.body.userid + "님!"});
+    else if (user) return res.sendFile(__dirname + '/src/views/chats.html');
+    //res.status(200).json({message : "반갑습니다! " + req.body.userid + "님!"});
     else return res.status(404).json({message : "아이디/비밀번호를 확인해주세요."});
   });
 });
