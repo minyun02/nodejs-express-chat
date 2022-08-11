@@ -14,8 +14,15 @@ mongoose.connect(MONGODB_URI)
 .catch(err => console.log(err));
 
 let UserSchema = new mongoose.Schema({
-  userid : String,
-  password : String
+  userid : {
+    type : String,
+    required : true,
+    unique : true
+  },
+  password : {
+    type : String,
+    required : true
+  }
 });
 
 let Users = mongoose.model('Users', UserSchema);
@@ -27,13 +34,18 @@ app.use(express.static(__dirname + '/src'));
 let userId = '';
 
 app.get('/', (req, res) => {
-  console.log(__dirname)
-  // res.sendFile(__dirname + '/src/views/index.html');
+  console.log(__dirname);
   res.sendFile(__dirname + '/src/views/login.html');
 });
 
 app.post('/', (req, res) => {
-  console.log(req.body);
+  Users.findOne({userid : req.body.userid, password : req.body.password }, (err, user) => {
+    console.log(req.body);
+    if (err) return res.status(500).json({message : "에러발생.."});
+    else if (user) return res.sendFile(__dirname + '/src/views/chats.html');
+    //res.status(200).json({message : "반갑습니다! " + req.body.userid + "님!"});
+    else return res.status(404).json({message : "아이디/비밀번호를 확인해주세요."});
+  });
 });
 
 app.get('/signup', (req, res) => {
@@ -41,12 +53,17 @@ app.get('/signup', (req, res) => {
 });
 
 app.post('/signup', (req, res) => {
-  const user = new Users(req.body);
-  console.log(req.body)
-  user.save((err) => {
-    if(err) return res.status(500).json({message : "저장 실패"});
-    else return res.status(200).json({message : "저장 성공", data : user});
-  })
+  Users.findOne({userid : req.body.userid, password : req.body.password }, (err, user) => {
+    if (err) return res.status(500).json({ message : "에러발생.."}); 
+    else if (user) return res.status(404).json({errors : [{ message : "아이디/비밀번호를 확인해주세요."}] }); 
+    else {
+      const user = new Users(req.body);
+      user.save((error) => {
+      if(error) return res.status(500).json({message : "저장 실패"});
+      else return res.status(200).json({message : "저장 성공", data : user});
+      });
+    }
+  });
 });
 
 io.on('connection', (socket) => {
