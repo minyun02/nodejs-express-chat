@@ -16,31 +16,18 @@ export default function Home() {
         </h1>
         
         <p className={styles.description}>
-          즐겁고 편안한 여행되십시오.
+          안녕하세요.
         </p>
 
         <div className={styles.grid}>
           <a href="/sign-in" className={styles.card}>
             <h2>Sign In &rarr;</h2>
-            <p>로그인 후 이용해주세요</p>
+            {/* <p>로그인 후 이용해주세요</p> */}
           </a>
 
           <a href="/sign-up" className={styles.card}>
             <h2>Sign Up &rarr;</h2>
-            <p>회원가입을 하시면, 더 많은 서비스를 이용하실 수 있습니다</p>
-          </a>
-
-          <a
-            href="" className={styles.card}>
-            <h2>Exploration &rarr;</h2>
-            <p>사이트 살펴보기</p>
-          </a>
-
-          <a href="" className={styles.card} >
-            <h2>Company &rarr;</h2>
-            <p>
-              저희 회사를 소개합니다
-            </p>
+            {/* <p>회원가입을 하시면, 더 많은 서비스를 이용하실 수 있습니다</p> */}
           </a>
         </div>
       </main>

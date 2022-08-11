@@ -1,0 +1,14 @@
+  
+.title {
+    display: block;
+    font-size: large;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 5px;
+    color: black;
+  }
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
