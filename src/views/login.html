@@ -12,7 +12,10 @@
       <button>로그인</button>
       <input type="button" onclick="goSignup()" value="회원가입">
     </form>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/public/js/login.js"></script>
+    <script>
+      function goSignup() {
+        location.href = "../signup"
+      }
+    </script>
   </body>
 </html>
